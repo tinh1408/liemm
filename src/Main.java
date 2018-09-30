@@ -7,27 +7,37 @@ public class Main {
         System.out.println("Vui lòng nhập điểm Lý");
         Scanner sc = new Scanner(System.in);
 
-        byte Diem_vat_ly = sc.nextByte();
-        do{
-            System.out.println("Vui lòng nhập số từ 0-10 : ");
-            byte Diem_vat_ly = sc.nextByte();
-        }while ((Diem_vat_ly < 0 ) || (Diem_vat_ly >10));
+        float Diem_vat_ly = sc.nextFloat();
+        if ((Diem_vat_ly < 0 ) || (Diem_vat_ly >10)){
+            do{
+                System.out.println("Vui lòng nhập số từ 0-10 : ");
+                Diem_vat_ly = sc.nextFloat();
+            }while ((Diem_vat_ly < 0 ) || (Diem_vat_ly >10));
+        }
 
-        byte Diem_hoa_hoc = sc.nextByte();
+        System.out.println("Vui lòng nhập điểm Hóa");
+        float Diem_hoa_hoc = sc.nextFloat();
+        if ((Diem_hoa_hoc < 0 ) || (Diem_hoa_hoc >10)){
         do{
             System.out.println("Vui lòng nhập số từ 0-10 : ");
-            byte Diem_hoa_hoc = sc.nextByte();
+            Diem_hoa_hoc = sc.nextFloat();
         }while ((Diem_hoa_hoc < 0 ) || (Diem_hoa_hoc >10));
+        }
 
-        byte Diem_sinh_hoc = sc.nextByte();
+        System.out.println("Vui lòng nhập điểm Sinh học");
+        float Diem_sinh_hoc = sc.nextFloat();
+        if ((Diem_sinh_hoc < 0 ) || (Diem_sinh_hoc >10)){
         do{
             System.out.println("Vui lòng nhập số từ 0-10 : ");
-            byte Diem_sinh_hoc = sc.nextByte();
+            Diem_sinh_hoc = sc.nextFloat();
         }while ((Diem_sinh_hoc < 0 ) || (Diem_sinh_hoc >10));
+        }
 
-        byte Diem_tong = Diem_vat_ly+ Diem_hoa_hoc + Diem_sinh_hoc;
-        byte Diem_TB = Diem_tong/3;
+        float Diem_tong = Diem_vat_ly + Diem_hoa_hoc + Diem_sinh_hoc;
+        float Diem_TB = Diem_tong/3;
         System.out.println("Điểm tổng là : " + Diem_tong );
         System.out.println("Điểm TB là : " + Diem_TB );
+
+        System.out.println("Hello World! Bài 2");
     }
 }
