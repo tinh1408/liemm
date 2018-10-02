@@ -6,11 +6,11 @@ public class Main {
         System.out.println("Hello World! Bài 1");
         System.out.println("Vui lòng nhập điểm Lý");
         Scanner sc = new Scanner(System.in);
-        float Diem_vat_ly;
+        float Diem_vat_ly; // Em đặt tên biến như này là sai quy tắc rồi, em nên sửa lại như này: diemVatLy
             do{
                 System.out.print("Vui lòng nhập số từ 0-10 : ");
-                Diem_vat_ly = sc.nextFloat();
-            }while ((Diem_vat_ly < 0 ) || (Diem_vat_ly >10));
+                Diem_vat_ly = sc.nextFloat(); 
+            }while ((Diem_vat_ly < 0 ) || (Diem_vat_ly >10)); // điều kiện chưa đúng em à, có trường hợp điểm =0 và = 10 nữa mà
 
         System.out.println("Vui lòng nhập điểm Hóa");
         float Diem_hoa_hoc;
@@ -52,7 +52,7 @@ public class Main {
             System.out.print("Vui lòng nhập bán kính lớn hơn 0 :");
             Ban_kinh_r = sc.nextFloat();
         }while (Ban_kinh_r < 0 );
-        float Chu_vi =  (Ban_kinh_r * 314/100);
+        float Chu_vi =  (Ban_kinh_r * 314/100);// 314/100 em nên khai báo hằng số cho nó: ví dụ: final int PI = 3,14;
         float Dien_tich = Ban_kinh_r * Ban_kinh_r *314/100;
         System.out.println("Chu vi hình tròn : " + Chu_vi);
         System.out.println("Diện tích hình tròn : " + Dien_tich);
@@ -66,7 +66,7 @@ public class Main {
             System.out.print("Vui lòng nhập năm bé hơn 2018 :");
             Nam_sinh = sc.nextInt();
         }while (Nam_sinh > 2018 );
-        int Tuoi = 2018 - Nam_sinh;
+        int Tuoi = 2018 - Nam_sinh; // Năm sinh em nên cho nhập vào vì qua năm 2019 thì chương trình của em chạy không đúng nữa
         System.out.println("Só tuổi là : " + Tuoi);
 
     }
